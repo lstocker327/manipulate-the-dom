@@ -66,6 +66,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     randomQuote();
     })
   }
+
+  function changeBlogColor(){
+    const blogPosts = document.querySelectorAll(".blog-post");
+    blogPosts.forEach(function(post){
+
+      post.addEventListener('mouseout', function(evt){
+        post.classList.toggle("purple");
+      })
+      post.addEventListener('mouseenter', function(evt){
+        post.classList.toggle("red");
+      })
+
+    })
+  }
   // Random quote of the day generator
   const randomQuote = function() {
     document.querySelector('#quote-of-the-day').textContent = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
@@ -99,6 +113,7 @@ addBlogPost();
 makeBtnClickable();
 
   // Part 9
+changeBlogColor();
 
 
 
