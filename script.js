@@ -58,7 +58,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const blogPostP = document.createElement("p");
     blogPostP.innerHTML = "I RACED LUKE STOCKER AND HE WON";
     blogPostDiv.appendChild(blogPostP);
+  }
 
+  function makeBtnClickable(){
+    const quoteBtn = document.querySelector("#quote-title");
+    quoteBtn.addEventListener('click', function(evt){
+    randomQuote();
+    })
   }
   // Random quote of the day generator
   const randomQuote = function() {
@@ -90,7 +96,7 @@ addCity();
 addBlogPost();
 
   // Part 8
-
+makeBtnClickable();
 
   // Part 9
 
